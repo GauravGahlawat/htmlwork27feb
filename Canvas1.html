@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+
+<title>CANVAS IN HTML</title>
+</head>
+<body>
+<canvas id="myCanvas" width="300" height="150" style="border:5px solid black;">
+
+</canvas>
+<script>
+var c = document.getElementById("myCanvas");
+var ctx = c.getContext("2d");
+
+//canvas move To method build line in a box
+ctx.moveTo(0, 0);
+ctx.lineTo(300, 150);
+ctx.stroke();
+
+// canvas font property helps in displaying name 
+ctx.font = "15px Arial";
+ctx.fillStyle='blue';
+ctx.fillText("Gaurav", 140, 140);
+
+
+ctx.fillStyle = "#FFFFFF"; // helps for stroke color 
+ctx.strokeStyle = "#FF00FF"; // it is used to fill colors in strokes
+ctx.fillRect(20, 20, 150, 100);// it fills rectangle
+ctx.strokeRect(20,20,150,100); // it only draw rectangle
+ctx.beginPath();
+ctx.arc(240, 75, 50, 0, 2 * Math.PI); // its used to draw circle with help of CANVAS
+ctx.stroke();
+</script>
+
+</body>
+</html>
